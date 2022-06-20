@@ -1,0 +1,4 @@
+Pingpong@hotmail.com
+BADREGEX@@BAD
+Example@example.com
+/
