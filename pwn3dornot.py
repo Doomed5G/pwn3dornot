@@ -3,12 +3,13 @@
 import logging
 import os
 import sys
-from time import sleep
+from time import sleep, time
 from typing import List
 from urllib.parse import quote
 import re
 import requests
 from dotenv import load_dotenv
+import operator
 
 
 
@@ -114,11 +115,13 @@ if __name__ == '__main__':
             print('-->', email)
             
             #Print out Pwned data
-            for breach in data:
+            for breach in ( sorted(data, key=operator.itemgetter("BreachDate"))):
                 Title = breach["Title"]
                 Domain = breach["Domain"]
                 Time = breach["BreachDate"]
                 print(Time,Title,Domain)
+                
+
     except KeyboardInterrupt:
         pass
     except ValueError as e:
