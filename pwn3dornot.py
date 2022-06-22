@@ -3,7 +3,6 @@
 import logging
 import os
 import sys
-from time import sleep, time
 from typing import List
 from urllib.parse import quote
 import re
