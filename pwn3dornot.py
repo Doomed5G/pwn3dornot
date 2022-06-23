@@ -116,10 +116,10 @@ if __name__ == '__main__':
             
             #Print out Pwned data
             for breach in ( sorted(data, key=operator.itemgetter("BreachDate"))):
-                Title = breach["Title"]
-                Domain = breach["Domain"]
-                Time = breach["BreachDate"]
-                print(Time,Title,Domain)
+                title = breach["Title"]
+                domain = breach["Domain"]
+                time = breach["BreachDate"]
+                print(time,title,domain)
                 
 
     except KeyboardInterrupt:
